@@ -1,0 +1,503 @@
+/* 
+    SOUNDTRACK YOUR STORY
+    Team Albatoters
+    HTML + CSS beginner project
+
+    Current stage: starter prototype (approximately 50%).
+    No JavaScript is used in this version.
+*/
+
+/* BASIC RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #090b18;
+    color: #f5f3ff;
+    line-height: 1.6;
+}
+
+/* HEADER */
+.header {
+    width: 100%;
+    min-height: 75px;
+    padding: 20px 7%;
+    background-color: #0d1022;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    border-bottom: 1px solid #292b46;
+}
+
+.logo {
+    color: #ffffff;
+    font-size: 20px;
+    font-weight: bold;
+    text-decoration: none;
+    letter-spacing: 2px;
+}
+
+.navigation {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 25px;
+}
+
+.navigation a {
+    color: #d6d3e8;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.navigation a:hover {
+    color: #65d6d0;
+}
+
+/* HERO SECTION */
+.hero {
+    min-height: 570px;
+    padding: 90px 9%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 50px;
+    background: linear-gradient(115deg, #11152d, #21183e, #102c3d);
+}
+
+.hero-content {
+    max-width: 620px;
+}
+
+.small-heading {
+    color: #65d6d0;
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 3px;
+    margin-bottom: 15px;
+}
+
+.hero h1 {
+    color: #ffffff;
+    font-size: 64px;
+    line-height: 1.05;
+    letter-spacing: 2px;
+    margin-bottom: 20px;
+}
+
+.hero-description {
+    color: #c5c5d8;
+    max-width: 500px;
+    margin-bottom: 30px;
+}
+
+.hero-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.button {
+    display: inline-block;
+    padding: 13px 20px;
+    border-radius: 4px;
+    text-decoration: none;
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.button-primary {
+    color: #08121b;
+    background-color: #65d6d0;
+}
+
+.button-outline {
+    color: #ffffff;
+    border: 1px solid #aaa6c8;
+}
+
+.button:hover {
+    opacity: 0.8;
+}
+
+.hero-art {
+    width: 300px;
+    height: 300px;
+    flex-shrink: 0;
+    border: 1px solid #77709d;
+    border-radius: 50%;
+    background: radial-gradient(circle, #654b91, #29234f 55%, #10182d);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 0 60px #51407855;
+}
+
+.music-disc {
+    width: 145px;
+    height: 145px;
+    border: 12px solid #17182e;
+    border-radius: 50%;
+    background: radial-gradient(circle, #65d6d0 0 8%, #282442 9% 35%, #121426 36% 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 35px;
+}
+
+.hero-art p {
+    margin-top: 20px;
+    font-size: 10px;
+    letter-spacing: 2px;
+}
+
+/* GENERAL SECTION STYLE */
+.section {
+    padding: 85px 8%;
+}
+
+.section-heading {
+    text-align: center;
+    margin-bottom: 45px;
+}
+
+.section-heading h2,
+.about-content h2 {
+    font-size: 34px;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+}
+
+.section-heading > p:last-child {
+    color: #aaaac0;
+}
+
+/* MOOD CARDS */
+.mood-section {
+    background-color: #0d1022;
+}
+
+.mood-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 15px;
+}
+
+.mood-card {
+    min-height: 190px;
+    padding: 25px 18px;
+    border: 1px solid #383653;
+    border-radius: 8px;
+    text-decoration: none;
+    color: white;
+    transition: transform 0.3s, border-color 0.3s;
+}
+
+.mood-card:hover {
+    transform: translateY(-6px);
+    border-color: #65d6d0;
+}
+
+.mood-icon {
+    font-size: 30px;
+}
+
+.mood-card h3 {
+    font-size: 15px;
+    margin: 12px 0 7px;
+}
+
+.mood-card p {
+    color: #c3c1d5;
+    font-size: 12px;
+}
+
+.night {
+    background: linear-gradient(140deg, #29234f, #12182d);
+}
+
+.heartbreak {
+    background: linear-gradient(140deg, #512d4b, #21182e);
+}
+
+.good-vibes {
+    background: linear-gradient(140deg, #6b4b31, #282039);
+}
+
+.focus {
+    background: linear-gradient(140deg, #23505a, #17263b);
+}
+
+.chill {
+    background: linear-gradient(140deg, #3d4e6c, #20243d);
+}
+
+/* ARTIST CARDS */
+.artists-section {
+    background-color: #090b18;
+}
+
+.artist-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 22px;
+}
+
+.artist-card {
+    overflow: hidden;
+    background-color: #14172b;
+    border: 1px solid #292b46;
+    border-radius: 7px;
+}
+
+.artist-art {
+    height: 180px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #ffffffaa;
+    font-size: 45px;
+    font-weight: bold;
+    letter-spacing: 5px;
+}
+
+.weeknd-art {
+    background: linear-gradient(135deg, #1a1238, #6c347b, #111322);
+}
+
+.laufey-art {
+    background: linear-gradient(135deg, #b28b69, #594b54, #24243c);
+}
+
+.bruno-art {
+    background: linear-gradient(135deg, #a84c2e, #e1a04f, #542c42);
+}
+
+.taylor-art {
+    background: linear-gradient(135deg, #8d648c, #d2a6a9, #49466f);
+}
+
+.joji-art {
+    background: linear-gradient(135deg, #343743, #777b83, #151722);
+}
+
+.arthur-art {
+    background: linear-gradient(135deg, #1a5c68, #397d91, #17253e);
+}
+
+.december-art {
+    background: linear-gradient(135deg, #7b5361, #b17b79, #26354c);
+}
+
+.artist-info {
+    padding: 20px;
+}
+
+.artist-info h3 {
+    font-size: 17px;
+    margin-bottom: 5px;
+}
+
+.artist-info p {
+    color: #b7b5ca;
+    font-size: 12px;
+    margin-bottom: 15px;
+}
+
+.artist-info a,
+.vlog-card a {
+    color: #65d6d0;
+    text-decoration: none;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+/* VLOG SECTION */
+.vlog-section {
+    background-color: #101329;
+}
+
+.vlog-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.vlog-card {
+    min-height: 220px;
+    padding: 28px;
+    background-color: #1a1d36;
+    border-left: 3px solid #65d6d0;
+    border-radius: 5px;
+}
+
+.vlog-tag {
+    color: #65d6d0;
+    font-size: 11px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    margin-bottom: 15px;
+}
+
+.vlog-card h3 {
+    font-size: 20px;
+    margin-bottom: 12px;
+}
+
+.vlog-card > p:not(.vlog-tag) {
+    color: #bcbacf;
+    font-size: 13px;
+    margin-bottom: 20px;
+}
+
+/* ABOUT SECTION */
+.about-section {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    gap: 50px;
+    align-items: center;
+    background: linear-gradient(120deg, #11152b, #1e1938);
+}
+
+.about-content > p:last-child {
+    color: #c5c3d7;
+    max-width: 650px;
+    margin-top: 15px;
+}
+
+.team-box {
+    padding: 30px;
+    border: 1px solid #4a456c;
+    background-color: #15182e;
+    border-radius: 7px;
+}
+
+.team-box h3 {
+    margin-bottom: 5px;
+}
+
+.team-box > p {
+    color: #65d6d0;
+    font-size: 12px;
+    letter-spacing: 2px;
+    margin-bottom: 15px;
+}
+
+.team-box ul {
+    padding-left: 20px;
+    color: #d0cede;
+}
+
+.team-box li {
+    margin-bottom: 8px;
+}
+
+/* FOOTER */
+.footer {
+    padding: 35px 8%;
+    text-align: center;
+    background-color: #070914;
+    border-top: 1px solid #292b46;
+}
+
+.footer p {
+    color: #aaa9bf;
+    font-size: 13px;
+    margin-top: 8px;
+}
+
+.footer .copyright {
+    color: #74748a;
+    font-size: 11px;
+    margin-top: 18px;
+}
+
+/* RESPONSIVE DESIGN */
+@media (max-width: 900px) {
+    .header {
+        flex-direction: column;
+    }
+
+    .mood-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .artist-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .hero {
+        padding: 70px 7%;
+    }
+
+    .hero h1 {
+        font-size: 50px;
+    }
+
+    .hero-art {
+        width: 230px;
+        height: 230px;
+    }
+}
+
+@media (max-width: 600px) {
+    .navigation {
+        justify-content: center;
+        gap: 13px;
+    }
+
+    .navigation a {
+        font-size: 11px;
+    }
+
+    .hero {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .hero h1 {
+        font-size: 43px;
+    }
+
+    .hero-buttons {
+        justify-content: center;
+    }
+
+    .hero-art {
+        width: 210px;
+        height: 210px;
+    }
+
+    .section {
+        padding: 60px 6%;
+    }
+
+    .section-heading h2,
+    .about-content h2 {
+        font-size: 27px;
+    }
+
+    .mood-grid,
+    .artist-grid,
+    .vlog-grid,
+    .about-section {
+        grid-template-columns: 1fr;
+    }
+
+    .mood-card {
+        min-height: 150px;
+    }
+}
